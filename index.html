@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- SEO básico -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de contacto sencilla con formulario accesible." />
+    <meta name="author" content="Mi Sitio" />
+    <meta name="robots" content="index, follow" />
+    <title>Mi Sitio | Contacto</title>
+
+    <link rel="canonical" href="https://misitio.com/contacto" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <meta property="og:title" content="Mi Sitio | Contacto" />
+    <meta property="og:description" content="Página de contacto sencilla con formulario accesible." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://misitio.com/contacto" />
+    <meta property="og:image" content="https://misitio.com/imagen.jpg" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+
+    <a href="#contenido" class="skip">Saltar al contenido</a>
+
+    <header>
+    <nav aria-label="Navegación principal">
+        <span class="logo">Mi Sitio</span>
+        <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main id="contenido">
+
+    <section id="inicio" aria-labelledby="titulo-inicio">
+        <h1 id="titulo-inicio">Bienvenido</h1>
+        <p>Un sitio sencillo con HTML semántico, formulario accesible y buenas prácticas.</p>
+    </section>
+
+    <section id="nosotros" aria-labelledby="titulo-nosotros">
+        <h2 id="titulo-nosotros">Nosotros</h2>
+
+        <div class="nosotros-grid">
+        <article aria-label="Nuestra misión">
+            <h3>Nuestra misión</h3>
+            <p>Crear soluciones web simples, accesibles y bien construidas para todos.</p>
+        </article>
+
+        <aside aria-label="Dato rápido">
+            <p><strong>¿Sabías que?</strong> Un buen HTML semántico mejora el SEO y la accesibilidad al mismo tiempo.</p>
+        </aside>
+        </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <form
+        id="formulario"
+        method="get"
+        action="respuesta.html"
+        novalidate
+        aria-labelledby="titulo-contacto"
+        >
+
+        <div class="campo">
+            <label for="nombre">Nombre <span aria-hidden="true">*</span></label>
+            <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            minlength="3"
+            maxlength="50"
+            required
+            placeholder="Tu nombre"
+            aria-required="true"
+            aria-describedby="nombre-err"
+            />
+            <span id="nombre-err" class="error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+            <label for="email">Correo <span aria-hidden="true">*</span></label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            minlength="6"
+            maxlength="80"
+            required
+            placeholder="tu@correo.com"
+            aria-required="true"
+            aria-describedby="email-err"
+            />
+            <span id="email-err" class="error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            minlength="7"
+            maxlength="15"
+            placeholder="+593 99 000 0000"
+            aria-describedby="tel-hint"
+            />
+            <small id="tel-hint">Opcional · 7 a 15 dígitos</small>
+        </div>
+
+        <div class="campo">
+            <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea
+            id="mensaje"
+            name="mensaje"
+            minlength="10"
+            maxlength="300"
+            rows="4"
+            required
+            placeholder="¿En qué te podemos ayudar?"
+            aria-required="true"
+            aria-describedby="mensaje-err"
+            ></textarea>
+            <span id="mensaje-err" class="error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" id="btn-enviar" aria-describedby="estado">Enviar mensaje</button>
+        <p id="estado" role="status" aria-live="polite"></p>
+
+        </form>
+    </section>
+
+    </main>
+
+    <footer>
+    <p>&copy; 2025 <strong>Mi Sitio</strong> — Hecho con HTML semántico</p>
+    <address>
+        <a href="mailto:contacto@misitio.com">contacto@misitio.com</a>
+    </address>
+    </footer>
+
+    <script src="main.js" defer></script>
+
+</body>
+</html>
